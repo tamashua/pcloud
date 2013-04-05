@@ -11,7 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130405044210) do
+ActiveRecord::Schema.define(:version => 20130405053523) do
+
+  create_table "clients", :force => true do |t|
+    t.string   "clientname"
+    t.text     "locationaddress"
+    t.string   "contactname"
+    t.string   "contactphone"
+    t.string   "contactemail"
+    t.boolean  "billingaddresssame"
+    t.text     "billingaddress"
+    t.string   "billingcontactname"
+    t.string   "billingphone"
+    t.string   "billingemail"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

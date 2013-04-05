@@ -1,0 +1,43 @@
+<div class="container">
+    <h1>All Clients</h1>
+
+    <table class="table-striped table-bordered table-hover">
+      <tr>
+        <th>Business Name</th>
+        <th>Location Address</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Billing Address Same?</th>
+        <th>Billing address</th>
+        <th>Billing Contact Name</th>
+        <th>Billing Phone</th>
+        <th>Billing Email</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= client.clientname %></td>
+        <td><%= client.locationaddress %></td>
+        <td><%= client.contactname %></td>
+        <td><%= client.contactphone %></td>
+        <td><%= client.contactemail %></td>
+        <td><%= client.billingaddresssame %></td>
+        <td><%= client.billingaddress %></td>
+        <td><%= client.billingcontactname %></td>
+        <td><%= client.billingphone %></td>
+        <td><%= client.billingemail %></td>
+        <td><%= link_to 'Show', client %></td>
+        <td><%= link_to 'Edit', edit_client_path(client) %></td>
+        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
+
+    <br />
+
+    <%= link_to 'New Client', new_client_path %>
+</div>
