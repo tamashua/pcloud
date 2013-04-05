@@ -1,4 +1,6 @@
 Pestcloud::Application.routes.draw do
+  devise_for :users
+
  get 'clients' => 'pages#clients'
 
  root :to => 'pages#home'
