@@ -13,3 +13,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+cod/
+*.swp
+*~
+.project
+.DS_Store
+.idea

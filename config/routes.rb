@@ -1,4 +1,8 @@
 Pestcloud::Application.routes.draw do
+ get 'clients' => 'pages#clients'
+
+ root :to => 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
